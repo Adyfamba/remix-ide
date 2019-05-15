@@ -58,7 +58,6 @@ export class AbstractPanel {
       if (!this.contents[name]) return
       if (this.active === name) {
         this.events.emit('toggle', name)
-        return
       }
       this.showContent(name)
       this.events.emit('showing', name)
